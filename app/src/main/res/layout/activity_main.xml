@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/turnoff"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/buttonTurnOff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/purple_200"
+            android:paddingStart="70dp"
+            android:gravity="fill_vertical"
+            android:drawableLeft="@drawable/airplanemode"
+            android:text="Turn off fligth mode" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/updating"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="50dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turnoff">
+
+        <Button
+            android:id="@+id/buttonUpdatingProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#EF0808"
+            android:paddingStart="90dp"
+            android:textColor="@color/white"
+            android:gravity="fill_vertical"
+            android:drawableLeft="@drawable/circle"
+            android:text="Updating Profile" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pictureSaved"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updating">
+
+        <Button
+            android:id="@+id/buttonPictureSaved"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FAFBFB"
+            android:textColor="#F80404"
+            android:text="Picture saved to gallery" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/unlocked"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@android:color/transparent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pictureSaved">
+
+        <Button
+            android:id="@+id/buttonUnlocked"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#040505"
+            android:text="Unlocked level 5"
+            android:textColor="@color/teal_200" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/level4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@android:color/transparent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unlocked">
+
+        <Button
+            android:id="@+id/buttonLevel4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#349FBF"
+            android:text="Level 4 completed"
+            android:paddingStart="70dp"
+            android:paddingEnd="45dp"
+            android:drawableLeft="@drawable/baseline_star_24"
+            android:drawableRight="@drawable/baseline_star_24"
+            android:gravity="center"
+
+            android:textColor="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/musicPaused"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/level4">
+
+        <Button
+            android:id="@+id/buttonMusicPaused"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#1A9F1F"
+            android:text="Music paused"
+            android:drawableLeft="@drawable/paused"
+            android:paddingStart="90dp"
+            android:gravity="fill_vertical"
+            android:textColor="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
