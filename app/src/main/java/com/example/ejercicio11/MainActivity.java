@@ -1,6 +1,8 @@
 package com.example.ejercicio11;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -30,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        binding.buttonChangeTheme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toggleTheme();
+            }
+        });
 
         binding.buttonUpdatingProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void toggleTheme() {
+        int nightMode = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
+        if (nightMode == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        recreate(); // Reinicia la actividad para aplicar el nuevo tema
+    }
 }
-
-
